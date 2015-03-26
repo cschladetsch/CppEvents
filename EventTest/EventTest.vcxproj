@@ -41,7 +41,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>..\Include;C:\Library\Boost\boost_1_47_0;$(IncludePath)</IncludePath>
+    <IncludePath>..\Include;c:\sdk\boost;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -90,7 +90,6 @@
     <ClInclude Include="..\Include\Schladetsch\Events\Detail\Generate\CreateMethod.h" />
     <ClInclude Include="..\Include\Schladetsch\Events\Detail\Invoker.h" />
     <ClInclude Include="..\Include\Schladetsch\Events\Event.h" />
-    <ClInclude Include="..\Include\Schladetsch\Events\EventP.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

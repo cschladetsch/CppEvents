@@ -13,14 +13,19 @@
 //#include "Schladetsch/Events/Event.h"
 
 // change this to whatever namespace suits you (only supported when using EventP.h)
-#define SCHLADETSCH_NAMESPACE YourNamespace
+#define SCHLADETSCH_NAMESPACE Schladetsch
+
 
 // this header only #includes <list> and puts all code in the variable SCHLADETSCH_NAMESPACE
 // generated using boost_1.47
-#include "Schladetsch/Events/EventP.h"
+//#include "Schladetsch/Events/EventP.h"
+#include "Schladetsch/Events/Event.h"
+
+using namespace SCHLADETSCH_NAMESPACE;
+using namespace SCHLADETSCH_NAMESPACE::Events;
 
 using namespace std;
-using namespace YourNamespace::Events;    // if you use Event.h, rather than EventP.h, change this to Schladetsch::Events
+//using namespace YourNamespace::Events;    // if you use Event.h, rather than EventP.h, change this to Schladetsch::Events
 //using namespace Schladetsch::Events;
 
 template <class T>
@@ -106,7 +111,7 @@ void F2(int n, string s)
 void TestFunctions()
 {
     // an event with no arguments
-    Event<> e0;
+	Event<> e0;
 
     // reset the harness, add the F0 function as a delegate to the event,
     // call the event, and assert that F0 was in fact called when the event fired
@@ -396,7 +401,7 @@ int main()
 
     TestConstMethods();
 
-    TestReferenceArgs();
+	TestReferenceArgs();
 
     cout << "passed\n";
 
