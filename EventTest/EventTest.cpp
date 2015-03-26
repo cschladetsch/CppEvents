@@ -111,6 +111,16 @@ void F2(int n, string s)
 void TestFunctions()
 {
     // an event with no arguments
+	/*
+
+	error C2665: 
+	'std::pair<Schladetsch::Events::Detail::DelegateType,std::shared_ptr<Schladetsch::Events::Detail::Delegate<0>::Given<Schladetsch::Events::Detail::Null,Schladetsch::Events::Detail::Null,Schladetsch::Events::Detail::Null,Schladetsch::Events::Detail::Null,Schladetsch::Events::Detail::Null,Schladetsch::Events::Detail::Null,Schladetsch::Events::Detail::Null,Schladetsch::Events::Detail::Null>>>::pair' : none of the 3 overloads could convert all the argument types
+
+
+	 could be '
+	 std::pair<Schladetsch::Events::Detail::DelegateType,std::shared_ptr<Schladetsch::Events::Detail::Delegate<0>::Given<Schladetsch::Events::Detail::Null,Schladetsch::Events::Detail::Null,Schladetsch::Events::Detail::Null,Schladetsch::Events::Detail::Null,Schladetsch::Events::Detail::Null,Schladetsch::Events::Detail::Null,Schladetsch::Events::Detail.
+	 or::Null,Schladetsch::Events::Detail::Null>>>::pair(const _Ty1 &,const _Ty2 &)'
+	 */
 	Event<> e0;
 
     // reset the harness, add the F0 function as a delegate to the event,
