@@ -342,23 +342,23 @@ void TestReferenceArgs()
 
 void TestChainingEvents()
 {
-    Event<int, string> e2, d2;
+    //Event<int, string> e2, d2;
 
-    G.Reset();
+    //G.Reset();
 
-    // chain events together: when e2 is fired, it will also fire d2, which in turn will invoke the function F2
-    e2.Add(d2);
-    d2.Add(F2);
+    //// chain events together: when e2 is fired, it will also fire d2, which in turn will invoke the function F2
+    //e2.Add(d2);
+    //d2.Add(F2);
 
-    // invoke e2: this will fire d2 which will call the funciont F2
-    e2(42, foo);
-    G.AssertCalled(42, foo);
+    //// invoke e2: this will fire d2 which will call the funciont F2
+    //e2(42, foo);
+    //G.AssertCalled(42, foo);
 
-    // remove the d2 event from e2's delegates, fire e2, and assert that F2 isn't called this time
-    G.Reset();
-    e2.Remove(d2);
-    e2(42, foo);
-    G.AssertNotCalled(2);
+    //// remove the d2 event from e2's delegates, fire e2, and assert that F2 isn't called this time
+    //G.Reset();
+    //e2.Remove(d2);
+    //e2(42, foo);
+    //G.AssertNotCalled(2);
 }
 
 void TestCopying()
