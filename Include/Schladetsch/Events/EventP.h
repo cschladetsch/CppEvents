@@ -681,10 +681,12 @@ namespace SCHLADETSCH_NAMESPACE { namespace Events { namespace Detail
         struct SinksType
         {
             typedef typename Delegate<N>::template Given<  T0 , T1 , T2 , T3 , T4 , T5 , T6 , T7 > Delegate;
-            typedef std::tr1::shared_ptr<Delegate> Ptr;
+            //typedef std::shared_ptr<Delegate> Ptr;
+            typedef Delegate * Ptr;
             typedef std::list<std::pair<DelegateType, Ptr> > Type;
         };
     };
+
     template <int>
     struct AddInvoker;
     #line 1 "c:\\library\\boost\\boost_1_47_0\\boost\\preprocessor\\iteration\\detail\\iter\\forward1.hpp"

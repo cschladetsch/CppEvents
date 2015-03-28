@@ -16,8 +16,10 @@ namespace Schladetsch { namespace Events { namespace Detail
         template <BOOST_PP_ENUM(SCHLADETSCH_EVENTS_ARITY_MAX, SCHLADETSCH_EVENTS_PP_CLASSN_ASSIGN, Null)>
         struct SinksType
         {
-            typedef typename Delegate<N>::template Given< BOOST_PP_ENUM_PARAMS(SCHLADETSCH_EVENTS_ARITY_MAX, T) > Delegate;
-            typedef std::tr1::shared_ptr<Delegate> Ptr;
+            typedef typename Delegate<N>::template Given< BOOST_PP_ENUM_PARAMS(SCHLADETSCH_EVENTS_ARITY_MAX, T) > DelegateN;
+			// TODO: why do shared_ptr's no longer work in 2015 with this project?
+            //typedef std::shared_ptr<DelegateN> Ptr;
+            typedef DelegateN * Ptr;
             typedef std::list<std::pair<DelegateType, Ptr> > Type;
         };
     };
@@ -27,7 +29,7 @@ namespace Schladetsch { namespace Events { namespace Detail
     template <int>
     struct AddInvoker;
 
-    // use vertical file iteration to deal with the general artiy
+    // use vertical file iteration to deal with the general arity
     #define BOOST_PP_ITERATION_LIMITS (0, SCHLADETSCH_EVENTS_ARITY_MAX - 1)
     #define BOOST_PP_FILENAME_1       "./Generate/AddInvoker.h"
     #include BOOST_PP_ITERATE()

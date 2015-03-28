@@ -45,7 +45,7 @@ struct Harness
     // called[1] means that a delegate with 1 arguments was called, etc
     int called[8];
 
-    // the values passsed to the delegate
+    // the values passed to the delegate
     Value values[8];
 
     void Reset()
@@ -111,16 +111,6 @@ void F2(int n, string s)
 void TestFunctions()
 {
     // an event with no arguments
-	/*
-
-	error C2665: 
-	'std::pair<Schladetsch::Events::Detail::DelegateType,std::shared_ptr<Schladetsch::Events::Detail::Delegate<0>::Given<Schladetsch::Events::Detail::Null,Schladetsch::Events::Detail::Null,Schladetsch::Events::Detail::Null,Schladetsch::Events::Detail::Null,Schladetsch::Events::Detail::Null,Schladetsch::Events::Detail::Null,Schladetsch::Events::Detail::Null,Schladetsch::Events::Detail::Null>>>::pair' : none of the 3 overloads could convert all the argument types
-
-
-	 could be '
-	 std::pair<Schladetsch::Events::Detail::DelegateType,std::shared_ptr<Schladetsch::Events::Detail::Delegate<0>::Given<Schladetsch::Events::Detail::Null,Schladetsch::Events::Detail::Null,Schladetsch::Events::Detail::Null,Schladetsch::Events::Detail::Null,Schladetsch::Events::Detail::Null,Schladetsch::Events::Detail::Null,Schladetsch::Events::Detail.
-	 or::Null,Schladetsch::Events::Detail::Null>>>::pair(const _Ty1 &,const _Ty2 &)'
-	 */
 	Event<> e0;
 
     // reset the harness, add the F0 function as a delegate to the event,
@@ -154,7 +144,7 @@ void TestFunctions()
 
     // make an event that takes two arguments: an integer and a string.
     // add the F2 function as a delegate to the event, fire it, and
-    // assert that F2 was called with the correct aguments
+    // assert that F2 was called with the correct arguments
     Event<int, string> e2;
     G.Reset();
     e2.Add(F2);

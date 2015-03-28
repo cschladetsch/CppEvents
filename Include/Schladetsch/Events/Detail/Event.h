@@ -82,7 +82,9 @@ namespace Schladetsch { namespace Events { namespace Detail
             /// Add a new function delegate
             void AddFunction(Function fun)
             {
-                sinks.push_back(ValueType(DelegateType::Function, new FunctionDelegate(fun)));
+				//ValueType vt(DelegateType::Function, std::make_shared<FunctionDelegate>(new FunctionDelegate(fun)));
+				ValueType vt(DelegateType::Function, new FunctionDelegate(fun));
+                sinks.push_back(vt);
             }
 
             /// Add a new Method delegate
@@ -100,7 +102,9 @@ namespace Schladetsch { namespace Events { namespace Detail
                 {
                     if (A->first != DelegateType::Function)
                         continue;
-                    FunctionDelegate *F = reinterpret_cast<FunctionDelegate *>(A->second.get());
+					// TODO shared_ptr
+                    //FunctionDelegate *F = reinterpret_cast<FunctionDelegate *>(A->second.get());
+                    FunctionDelegate *F = reinterpret_cast<FunctionDelegate *>(A->second);
                     if (F->fun != fun)
                         continue;
                     sinks.erase(A);
@@ -117,7 +121,9 @@ namespace Schladetsch { namespace Events { namespace Detail
                 {
                     if (A->first != DelegateType::Method)
                         continue;
-                    MethodObjectBase<C,D> *M = reinterpret_cast<MethodObjectBase<C,D> *>(A->second.get());
+					// TODO shared_ptr
+                    //MethodObjectBase<C,D> *M = reinterpret_cast<MethodObjectBase<C,D> *>(A->second.get());
+                    MethodObjectBase<C,D> *M = reinterpret_cast<MethodObjectBase<C,D> *>(A->second);
                     if (M->object != bound.object || M->method != bound.method)
                         continue;
                     sinks.erase(A);
