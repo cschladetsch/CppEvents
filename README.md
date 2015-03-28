@@ -8,3 +8,9 @@ provides a detailed description of the library.
 
 Currently broken with VS2013 abd latest boost. Will be fixed within days.
 
+Update: the 'fix' was to not use shared_ptr<>. So the project now builds and runs, but leaks.
+
+This seems to be a problem with the new compiler, which cannot deduce correct argument types when using deeply nested (and auto-generated) templates when deducing types for shared_ptr<>.
+
+There are only a few spots in the code that is affected by this, all marked with // TODO shared_ptr
+
