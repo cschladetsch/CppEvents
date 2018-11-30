@@ -1,5 +1,4 @@
-CppEvents
-=========
+# Cpp Events
 
 A fast and general multicast delegate/event (signals and slots) system for C++.
 
@@ -13,4 +12,8 @@ Update: the 'fix' was to not use shared_ptr<>. So the project now builds and run
 This seems to be a problem with the new compiler, which cannot deduce correct argument types when using deeply nested (and auto-generated) templates when deducing types for shared_ptr<>.
 
 There are only a few spots in the code that is affected by this, all marked with // TODO shared_ptr
+
+## Building the Header
+
+The file `EventTest/Source/CreateHeader.cpp` can be used to create `EventPP.h`, which is a single header that includes the entire library and had no external depandencies other than boost.
 
