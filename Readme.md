@@ -14,10 +14,10 @@ See [webarchive](http://web.archive.org/web/20140719090331/http://www.altdev.co/
 provides a detailed description of the library and architecture.
 
 ## Building the Header
-The file `EventTest/Source/CreateHeader.cpp` can be used to create `EventPP.h`, which is a single header that includes the entire library and had no external depandencies other than boost. This in available in the latest [Release](https://github.com/cschladetsch/CppEvents/releases/tag/v2.6).
+The file `EventTest/Source/CreateHeader.cpp` can be used to create `EventPP.h`, which is a single header that includes the entire library and had no external depandencies other than boost. This single header us available in the latest [Release](https://github.com/cschladetsch/CppEvents/releases/tag/v2.6).
 
 ## Usage
-Simply `#include "EventP.hpp"`.
+Simply `#include "EventP.hpp"`. You can build or get from latest [Release](https://github.com/cschladetsch/CppEvents/releases/tag/v2.6).
 
 There are no external dependencies. See [usage](EventTest/EventTest.cpp) from the unit tests.
 
