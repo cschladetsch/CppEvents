@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/github/license/cschladetsch/CppEvents.svg?label=License&maxAge=86400)](./LICENSE.txt)
 ![Release](https://img.shields.io/github/release/cschladetsch/CppEvents.svg?label=Release&maxAge=60)
 
-A fast and general multicast delegate/event (signals and slots) system for C++. This is inspired by .Net's delegates and events model. This is a single-header, self-contained unit of work that has no external depdancie. It does have external `boost` dependencies to *create* the header. But you don't need to create it - just use it as a single header inclusion. The pre-processed header file will work on anything after and including *Visual Studio 2009* or equivalent.
+A fast and general multicast delegate/event (signals and slots) system for C++. This is inspired by .Net's delegates and events model. This is a single-header, self-contained unit of work that has no external depdencies. It does have external `boost` dependencies to *create* the header. But you don't need to create it - just use it as a single header inclusion. The pre-processed header file will work on anything after and including *Visual Studio 2009* or equivalent.
 
 Events can be a function, a method, const or non-const, of any arity up to `SCHLADETSCH_EVENTS_ARITY_MAX`, which defaults to 8 but obviously can be overriden either in code or via compile-time switches.
 
