@@ -8,14 +8,18 @@ A fast and general multicast delegate/event (signals and slots) system for C++. 
 
 Events can be a function, a method, const or non-const.
 
-Not currently supported: lambda's and C++11 functions. This library was written well before these things existed, and it could be improved/re-written based on C++ generic functions. Probably, and perhaps at performance cost
+Not currently supported: lambda's and C\+\+11 functions. This library was written well before these things existed, and it could be improved/re-written based on C++ generic functions. Probably, and perhaps at performance cost
 
-See http://web.archive.org/web/20140719090331/http://www.altdev.co/2011/10/30/c-events/ for the original article, which
-provides a detailed description of the library.
+See [webarchive](http://web.archive.org/web/20140719090331/http://www.altdev.co/2011/10/30/c-events/) for the original article, which also 
+provides a detailed description of the library and architecture.
 
 ## Building the Header
+The file `EventTest/Source/CreateHeader.cpp` can be used to create `EventPP.h`, which is a single header that includes the entire library and had no external depandencies other than boost. This in available in the latest [Release](https://github.com/cschladetsch/CppEvents/releases/tag/v2.6).
 
-The file `EventTest/Source/CreateHeader.cpp` can be used to create `EventPP.h`, which is a single header that includes the entire library and had no external depandencies other than boost.
+## Usage
+Simply `#include "EventP.hpp"`.
+
+There are no external dependencies. See [usage](EventTest/EventTest.cpp) from the unit tests.
 
 ## TODO
 Compare with new techniques available in C++ 11 plus, and leverage std::func<>.
