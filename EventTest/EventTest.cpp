@@ -9,16 +9,9 @@
 #include <assert.h>
 #include <vector>
 
-// this header uses various files from <boost/preprocessor>, and uses a fixed Schladetsch namespace
-//#include "Schladetsch/Events/Event.h"
-
 // change this to whatever namespace suits you (only supported when using EventP.h)
 #define SCHLADETSCH_NAMESPACE Schladetsch
 
-
-// this header only #includes <list> and puts all code in the variable SCHLADETSCH_NAMESPACE
-// generated using boost_1.47
-//#include "Schladetsch/Events/EventP.h"
 #include "Schladetsch/Events/Event.h"
 
 using namespace SCHLADETSCH_NAMESPACE;
@@ -98,14 +91,11 @@ void F0()
 void F1(int n)
 {
     G.called[1]++;
-    //G.values[0] = n;
 }
 
 void F2(int n, string s)
 {
     G.called[2]++;
-    //G.values[0] = n;
-    //G.values[1] = s;
 }
 
 void TestFunctions()
@@ -169,14 +159,11 @@ struct Test
     void M1(int n)
     {
         G.called[1]++;
-        //G.values[0] = n;
     }
 
     void M2(int n, string s)
     {
         G.called[2]++;
-        //G.values[0] = n;
-        //G.values[1] = s;
     }
 
     void CM0() const
@@ -187,14 +174,11 @@ struct Test
     void CM1(int n) const
     {
         G.called[1]++;
-        //G.values[0] = n;
     }
 
     void CM2(int n, string s) const
     {
         G.called[2]++;
-        //G.values[0] = n;
-        //G.values[1] = s;
     }
 
     void RM1(int &n) const
@@ -206,8 +190,6 @@ struct Test
     void RM2(int &n, const string& s) const
     {
         G.called[2]++;
-        //G.values[0] = n;
-        //G.values[1] = s;
     }
 };
 
@@ -342,6 +324,7 @@ void TestReferenceArgs()
 
 void TestChainingEvents()
 {
+    // TODO
     //Event<int, string> e2, d2;
 
     //G.Reset();
