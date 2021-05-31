@@ -1,4 +1,4 @@
-# Cpp Events
+# Cpp Events ![image](External/Icon.png)
 
 [![CodeFactor](https://www.codefactor.io/repository/github/cschladetsch/CppEvents/badge)](https://www.codefactor.io/repository/github/cschladetsch/CppEvents)
 [![License](https://img.shields.io/github/license/cschladetsch/CppEvents.svg?label=License&maxAge=86400)](./LICENSE.txt)
