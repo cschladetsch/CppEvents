@@ -681,8 +681,8 @@ namespace SCHLADETSCH_NAMESPACE { namespace Events { namespace Detail
         struct SinksType
         {
             typedef typename Delegate<N>::template Given<  T0 , T1 , T2 , T3 , T4 , T5 , T6 , T7 > Delegate;
-            //typedef std::shared_ptr<Delegate> Ptr;
-            typedef Delegate * Ptr;
+            typedef std::shared_ptr<Delegate> Ptr;
+            //typedef Delegate * Ptr;
             typedef std::list<std::pair<DelegateType, Ptr> > Type;
         };
     };
