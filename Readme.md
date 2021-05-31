@@ -23,6 +23,7 @@ See [usage](EventTest/EventTest.cpp) from the unit tests.
 I keep the library udated over the decades. See the Releases page.
 
 ## TODO
-* Compare with new techniques available in C++ 11 plus.
+* Compare with new techniques available in C++ 11?
 * Leverage std::func<>.
 * Runtime performance testing.
+* Use [catch](https://github.com/catchorg/Catch2) for testing.
