@@ -8,8 +8,6 @@ A fast and general multicast delegate/event (signals and slots) system for C++. 
 
 Events can be a function, a method, const or non-const, of any arity up to `SCHLADETSCH_EVENTS_ARITY_MAX`, which defaults to 8 but obviously can be overriden either in code or via compile-time switches.
 
-**Not currently supported**: lambda's and C\+\+11 functions. This library was written well before these things existed, and it could be improved/re-written based on C++ generic functions - probably, and perhaps at a performance cost.
-
 See [webarchive](http://web.archive.org/web/20140719090331/http://www.altdev.co/2011/10/30/c-events/) for the original article, which also 
 provides a detailed description of the library and architecture.
 
@@ -17,7 +15,7 @@ provides a detailed description of the library and architecture.
 Simply compiling the file `EventTest/Source/CreateHeader.cpp` will create [EventsP.hpp](https://github.com/cschladetsch/CppEvents/blob/master/EventsP.hpp), which is a single header that includes the entire library and has no external depandencies.
 
 ## Usage
-Simply `#include "EventsP.hpp"`. You can grab the [single requried file](https://github.com/cschladetsch/CppEvents/blob/master/EventsP.hpp), build it from this repo, or get it from latest [Release](https://github.com/cschladetsch/CppEvents/releases/tag/v2.6).
+Simply `#include "EventsP.hpp"`. You can grab the [single requried file](https://github.com/cschladetsch/CppEvents/blob/master/EventsP.hpp), build it from this repo, or get it from latest [Release](https://github.com/cschladetsch/CppEvents/releases/tag/v3.0).
 
 See [usage](EventTest/EventTest.cpp) from the unit tests.
 
