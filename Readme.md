@@ -12,10 +12,10 @@ See [webarchive](http://web.archive.org/web/20140719090331/http://www.altdev.co/
 provides a detailed description of the library and architecture.
 
 ## Building the Header
-Simply compiling the file `EventTest/Source/CreateHeader.cpp` will create [EventsP.hpp](https://github.com/cschladetsch/CppEvents/blob/master/EventsP.hpp), which is a single header that includes the entire library and has no external depandencies.
+Compiling the file `EventTest/Source/CreateHeader.cpp` will create [EventsP.hpp](https://github.com/cschladetsch/CppEvents/blob/master/EventsP.hpp), which is a single header that includes the entire library and has no external depandencies.
 
 ## Usage
-Simply `#include "EventsP.hpp"`. You can grab the [single requried file](https://github.com/cschladetsch/CppEvents/blob/master/EventsP.hpp), build it from this repo, or get it from latest [Release](https://github.com/cschladetsch/CppEvents/releases/tag/v3.0).
+`#include "EventsP.hpp"`. You can grab the [single requried file](https://github.com/cschladetsch/CppEvents/blob/master/EventsP.hpp), build it from this repo, or get it from latest [Release](https://github.com/cschladetsch/CppEvents/releases/tag/v3.0).
 
 See [usage](EventTest/EventTest.cpp) from the unit tests.
 
